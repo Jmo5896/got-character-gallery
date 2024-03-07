@@ -1,21 +1,19 @@
-import PropTypes from 'prop-types'
+import React from "react";
 
-const Character = ({ family, fullName, imageUrl, title }) => {
-    return (
-        <div className="card-container">
-            <img src={ imageUrl } alt={ fullName } />
-            <div className="card-body">
-                <h2>{ title } { fullName } of { family }</h2>
-            </div>
-        </div>
-    );
-};
-
-Character.propTypes = {
-    family: PropTypes.string,
-    fullName: PropTypes.string,
-    imageUrl: PropTypes.string,
-    title: PropTypes.string,
+function Character({ spouse, realm, race, death, birth, name, imgUrl }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <img src={imgUrl} alt={name} />
+      <ul>
+        <li>Spouse: {spouse}</li>
+        <li>Realm: {realm}</li>
+        <li>Race: {race}</li>
+        <li>Date of Death: {death}</li>
+        <li>Date of Birth: {birth}</li>
+      </ul>
+    </div>
+  );
 }
 
 export default Character;
