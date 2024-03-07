@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <h1>LOTR Project</h1> */}
+      <h1>LOTR Project</h1>
       <CharacterGallery />
     </>
   );
